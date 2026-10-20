@@ -1,6 +1,30 @@
 # 💳 Credit Card Fraud Detection System
 
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An end-to-end, production-grade Machine Learning solution for detecting fraudulent credit card transactions in heavily imbalanced financial data.
+
+---
+
+## 🌐 Live Web Application
+
+The interactive web dashboard can be launched locally or deployed to **Streamlit Community Cloud** with 1 click:
+
+### 1. Run Locally:
+```bash
+streamlit run app.py
+```
+*Access in browser at:* `http://localhost:8501`
+
+### 2. Deploy Live to the Web (Free via Streamlit Cloud):
+1. Sign in to [share.streamlit.io](https://share.streamlit.io) with your GitHub account.
+2. Click **New app** and select:
+   - **Repository**: `Madhav70/Credit-Card-Fraud-Detection`
+   - **Branch**: `main`
+   - **Main file path**: `app.py`
+3. Click **Deploy!** Your interactive app will be live at a public URL (e.g., `https://credit-card-fraud-detection.streamlit.app`).
 
 ---
 
@@ -35,6 +59,7 @@ An end-to-end, production-grade Machine Learning solution for detecting fraudule
 Credit Card Fraud Detection/
 ├── creditcard.csv                 # Original Kaggle dataset (284,807 rows)
 ├── requirements.txt               # Project dependencies
+├── test_pipeline.py               # Automated smoke & unit tests
 ├── eda.py                         # Standalone Exploratory Data Analysis & visual generation script
 ├── eda_plots/                     # Generated high-resolution EDA figures
 │   ├── class_distribution.png
@@ -83,8 +108,12 @@ Trains Logistic Regression, Random Forest, and XGBoost, evaluates metrics on the
 python train.py
 ```
 
-### 4. Launch the Interactive Web App
-Launch the Streamlit web dashboard to test transactions in real time or process CSV batches:
+### 4. Run Automated Tests
+```bash
+python test_pipeline.py
+```
+
+### 5. Launch the Interactive Web App
 ```bash
 streamlit run app.py
 ```
