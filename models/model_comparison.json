@@ -1,0 +1,97 @@
+{
+    "best_model_name": "XGBoost (scale_pos_weight)",
+    "models": {
+        "Logistic Regression (Balanced)": {
+            "model_name": "Logistic Regression (Balanced)",
+            "roc_auc": 0.972,
+            "pr_auc": 0.7189,
+            "precision": 0.0609,
+            "recall": 0.9184,
+            "f1": 0.1141,
+            "f2": 0.2405,
+            "confusion_matrix": [
+                [
+                    55475,
+                    1389
+                ],
+                [
+                    8,
+                    90
+                ]
+            ],
+            "true_negatives": 55475,
+            "false_positives": 1389,
+            "false_negatives": 8,
+            "true_positives": 90
+        },
+        "Random Forest (Balanced)": {
+            "model_name": "Random Forest (Balanced)",
+            "roc_auc": 0.9859,
+            "pr_auc": 0.8303,
+            "precision": 0.7217,
+            "recall": 0.8469,
+            "f1": 0.7793,
+            "f2": 0.8185,
+            "confusion_matrix": [
+                [
+                    56832,
+                    32
+                ],
+                [
+                    15,
+                    83
+                ]
+            ],
+            "true_negatives": 56832,
+            "false_positives": 32,
+            "false_negatives": 15,
+            "true_positives": 83
+        },
+        "XGBoost (scale_pos_weight)": {
+            "model_name": "XGBoost (scale_pos_weight)",
+            "roc_auc": 0.9729,
+            "pr_auc": 0.8596,
+            "precision": 0.6131,
+            "recall": 0.8571,
+            "f1": 0.7149,
+            "f2": 0.794,
+            "confusion_matrix": [
+                [
+                    56811,
+                    53
+                ],
+                [
+                    14,
+                    84
+                ]
+            ],
+            "true_negatives": 56811,
+            "false_positives": 53,
+            "false_negatives": 14,
+            "true_positives": 84
+        },
+        "Logistic Regression (SMOTE)": {
+            "model_name": "Logistic Regression (SMOTE)",
+            "roc_auc": 0.9712,
+            "pr_auc": 0.7235,
+            "precision": 0.0591,
+            "recall": 0.9184,
+            "f1": 0.111,
+            "f2": 0.2349,
+            "confusion_matrix": [
+                [
+                    55430,
+                    1434
+                ],
+                [
+                    8,
+                    90
+                ]
+            ],
+            "true_negatives": 55430,
+            "false_positives": 1434,
+            "false_negatives": 8,
+            "true_positives": 90
+        }
+    }
+}

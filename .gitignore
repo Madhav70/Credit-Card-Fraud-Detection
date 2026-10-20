@@ -1,0 +1,27 @@
+# Large Dataset: Exceeds GitHub's 100MB file limit (creditcard.csv is 150.8 MB)
+# Users can download the dataset directly from Kaggle
+creditcard.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Operating system artifacts
+Thumbs.db
+.DS_Store
