@@ -1,30 +1,27 @@
 # 💳 Credit Card Fraud Detection System
 
+🌐 **Live Web Application (GitHub Pages)**: [https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://madhav70.github.io/Credit-Card-Fraud-Detection/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An end-to-end, production-grade Machine Learning solution for detecting fraudulent credit card transactions in heavily imbalanced financial data.
 
 ---
 
-## 🌐 Live Web Application
+## 🌐 Live Interactive Application
 
-The interactive web dashboard can be launched locally or deployed to **Streamlit Community Cloud** with 1 click:
+The full interactive dashboard is hosted directly on **GitHub Pages**:
 
-### 1. Run Locally:
-```bash
-streamlit run app.py
-```
-*Access in browser at:* `http://localhost:8501`
+👉 **[https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)**
 
-### 2. Deploy Live to the Web (Free via Streamlit Cloud):
-1. Sign in to [share.streamlit.io](https://share.streamlit.io) with your GitHub account.
-2. Click **New app** and select:
-   - **Repository**: `Madhav70/Credit-Card-Fraud-Detection`
-   - **Branch**: `main`
-   - **Main file path**: `app.py`
-3. Click **Deploy!** Your interactive app will be live at a public URL (e.g., `https://credit-card-fraud-detection.streamlit.app`).
+Features available on the live page:
+1. **Executive KPI Dashboard**: Overview of 284,807 transactions, 0.173% fraud rate, and model metrics.
+2. **Interactive EDA Charts**: Class imbalance breakdowns, amount profiles, and correlation rankings.
+3. **Dynamic Decision Threshold Simulator**: Adjust the classification cutoff (0.01 to 0.99) with live recalculations of Recall, False Positives, and financial loss ($FN \times \$250 + FP \times \$15$).
+4. **Real-time Transaction Risk Evaluator**: Input any amount, time, and PCA coordinates or test pre-loaded normal vs. stolen card presets with live risk gauge.
+5. **Batch Audit Stream**: Simulated stream of incoming transactions with automated risk classification.
 
 ---
 
@@ -35,7 +32,7 @@ streamlit run app.py
 - **Imbalanced Learning**: Benchmarks **Cost-Sensitive Learning** (`scale_pos_weight`, `class_weight='balanced'`) vs. **Synthetic Oversampling (SMOTE)**.
 - **Evaluation Priority**: Prioritizes **Precision-Recall AUC (PR-AUC / Average Precision)**, **Recall (Sensitivity)**, and **F2-Score** over deceptive Accuracy.
 - **Top Performer**: **XGBoost (`scale_pos_weight`)** achieved a **PR-AUC of 0.8596** and caught **85.7%** of frauds with only 53 false alarms out of 56,962 test transactions.
-- **Interactive Web App**: A modern [Streamlit](file:///c:/Users/Admin/Downloads/Credit%20Card%20Fraud%20Detection/app.py) application featuring live transaction risk scoring, batch CSV processing, dynamic threshold tuning, and financial impact simulation.
+- **Streamlit Local Application**: Also includes a full Python [`app.py`](file:///c:/Users/Admin/Downloads/Credit%20Card%20Fraud%20Detection/app.py) for local testing or custom CSV uploads.
 
 ---
 
@@ -57,6 +54,7 @@ streamlit run app.py
 
 ```
 Credit Card Fraud Detection/
+├── index.html                     # Live interactive web application (GitHub Pages)
 ├── creditcard.csv                 # Original Kaggle dataset (284,807 rows)
 ├── requirements.txt               # Project dependencies
 ├── test_pipeline.py               # Automated smoke & unit tests
@@ -82,14 +80,14 @@ Credit Card Fraud Detection/
 │   ├── roc_curves.png             # Receiver Operating Characteristic curves
 │   ├── confusion_matrices.png     # 2x2 comparison grid of confusion matrices
 │   └── feature_importance.png     # Top predictive features (XGBoost Gain)
-├── app.py                         # Streamlit interactive web application
+├── app.py                         # Streamlit Python web dashboard
 ├── Credit_Card_Fraud_Detection.ipynb # Complete end-to-end Jupyter Notebook
 └── README.md                      # Documentation & operational guide
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started Locally
 
 ### 1. Install Dependencies
 ```bash
@@ -97,33 +95,21 @@ pip install -r requirements.txt
 ```
 
 ### 2. Run Exploratory Data Analysis (EDA)
-Generates statistical summaries and high-resolution charts in `eda_plots/`:
 ```bash
 python eda.py
 ```
 
 ### 3. Train & Benchmark Models
-Trains Logistic Regression, Random Forest, and XGBoost, evaluates metrics on the held-out stratified test set, and exports models to `models/`:
 ```bash
 python train.py
 ```
 
-### 4. Run Automated Tests
+### 4. Run Automated Smoke Tests
 ```bash
 python test_pipeline.py
 ```
 
-### 5. Launch the Interactive Web App
+### 5. Launch Streamlit Python Web App
 ```bash
 streamlit run app.py
 ```
-
----
-
-## 🧠 Business Impact & Decision Threshold Simulator
-
-In real banking operations, the default `0.50` probability threshold is rarely optimal:
-$$\text{Total Expected Loss} = (\text{False Negatives} \times \text{Fraud Loss}) + (\text{False Positives} \times \text{Alert Cost})$$
-
-- When **Fraud Loss** = **$250** and **Alert Cost** = **$15**, lowering the threshold to **~0.25–0.35** captures additional frauds, reducing overall institutional financial losses.
-- The interactive Streamlit dashboard includes a **live simulator slider** allowing risk managers to dynamically tune this balance.
