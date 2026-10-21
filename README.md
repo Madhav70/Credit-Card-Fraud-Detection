@@ -1,6 +1,5 @@
-# 💳 Credit Card Fraud Detection System
-
-🌐 **Live Web Application (GitHub Pages)**: [https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)
+# Credit Card Fraud Detection System
+**Live Web Application (GitHub Pages)**: [https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://madhav70.github.io/Credit-Card-Fraud-Detection/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -10,11 +9,11 @@ An end-to-end, production-grade Machine Learning solution for detecting fraudule
 
 ---
 
-## 🌐 Live Interactive Application
+## Live Interactive Application
 
 The full interactive dashboard is hosted directly on **GitHub Pages**:
 
-👉 **[https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)**
+**[https://madhav70.github.io/Credit-Card-Fraud-Detection/](https://madhav70.github.io/Credit-Card-Fraud-Detection/)**
 
 Features available on the live page:
 1. **Executive KPI Dashboard**: Overview of 284,807 transactions, 0.173% fraud rate, and model metrics.
@@ -25,7 +24,7 @@ Features available on the live page:
 
 ---
 
-## 📌 Project Highlights
+## Project Highlights
 
 - **Dataset**: 284,807 European cardholder transactions, containing **492 frauds (0.173%)** — an extreme **577:1** imbalance ratio.
 - **Robust Preprocessing**: Outlier-resilient `RobustScaler` on `Time` and `Amount` paired with Stratified Train/Test splitting to prevent data leakage.
@@ -36,11 +35,11 @@ Features available on the live page:
 
 ---
 
-## 📊 Benchmark Results (56,962 Test Transactions, 98 Frauds)
+## Benchmark Results (56,962 Test Transactions, 98 Frauds)
 
 | Model | PR-AUC (Avg Precision) | ROC-AUC | Recall (Fraud Catch) | Precision | F1-Score | False Positives |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **XGBoost (`scale_pos_weight`)** 🏆 | **0.8596** | 0.9729 | 85.71% (84/98) | 61.31% | 0.7149 | 53 |
+| **XGBoost (`scale_pos_weight`)** | **0.8596** | 0.9729 | 85.71% (84/98) | 61.31% | 0.7149 | 53 |
 | **Random Forest (Balanced)** | 0.8303 | **0.9859** | 84.69% (83/98) | **72.17%** | **0.7793** | **32** |
 | **Logistic Regression (SMOTE)** | 0.7235 | 0.9712 | **91.84%** (90/98) | 5.91% | 0.1110 | 1,434 |
 | **Logistic Regression (Balanced)** | 0.7189 | 0.9720 | **91.84%** (90/98) | 6.09% | 0.1141 | 1,389 |
@@ -50,7 +49,7 @@ Features available on the live page:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Credit Card Fraud Detection/
@@ -87,7 +86,7 @@ Credit Card Fraud Detection/
 
 ---
 
-## 🚀 Getting Started Locally
+## Getting Started Locally
 
 ### 1. Install Dependencies
 ```bash
